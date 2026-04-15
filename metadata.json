@@ -1,0 +1,6 @@
+{
+  "name": "Snake & Beats",
+  "description": "A retro Snake game with a built-in music player and neon aesthetic, featuring AI-generated beat descriptions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

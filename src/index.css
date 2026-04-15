@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-magenta-500: #ff00ff;
+  --color-cyan-400: #00f3ff;
+}
+
+@layer utilities {
+  .glitch {
+    position: relative;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 255, 0.75),
+      0.025em 0.05em 0 rgba(255, 255, 0, 0.75);
+    animation: glitch 500ms infinite;
+  }
+
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+        -0.05em -0.025em 0 rgba(0, 255, 255, 0.75),
+        -0.025em 0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+    14% {
+      text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+        -0.05em -0.025em 0 rgba(0, 255, 255, 0.75),
+        -0.025em 0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+    15% {
+      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 255, 0.75),
+        0.025em 0.025em 0 rgba(0, 255, 255, 0.75),
+        -0.05em -0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 255, 0.75),
+        0.025em 0.025em 0 rgba(0, 255, 255, 0.75),
+        -0.05em -0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+    50% {
+      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 255, 0.75),
+        0.05em 0 0 rgba(0, 255, 255, 0.75),
+        0 -0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+    99% {
+      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 255, 0.75),
+        0.05em 0 0 rgba(0, 255, 255, 0.75),
+        0 -0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+    100% {
+      text-shadow: -0.025em 0 0 rgba(255, 0, 255, 0.75),
+        -0.025em -0.025em 0 rgba(0, 255, 255, 0.75),
+        -0.025em -0.05em 0 rgba(255, 255, 0, 0.75);
+    }
+  }
+
+  .digital-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
